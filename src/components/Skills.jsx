@@ -5,38 +5,41 @@ const skillGroups = [
     category: 'Backend',
     icon: '⚙️',
     skills: [
-      { name: 'PHP', level: 80 },
-      { name: 'Laravel', level: 75 },
-      { name: 'Node.js', level: 50 },
-      { name: 'Express', level: 45 },
-      { name: 'REST API Design', level: 70 },
+      { name: 'PHP & Laravel',   level: 85 },
+      { name: 'Python & Django', level: 80 },
+      { name: 'Rust',            level: 70 },
+      { name: 'REST API Design', level: 85 },
+      { name: 'Node.js',         level: 65 },
     ],
   },
   {
-    category: 'Database',
-    icon: '🗄️',
-    skills: [
-      { name: 'MySQL', level: 75 },
-      { name: 'SQLite', level: 60 },
-      { name: 'Database Design', level: 65 },
-    ],
-  },
-  {
-    category: 'Frontend',
+    category: 'Frontend & Mobile',
     icon: '🖥️',
     skills: [
-      { name: 'React', level: 40 },
-      { name: 'Tailwind CSS', level: 50 },
-      { name: 'HTML & CSS', level: 70 },
+      { name: 'React (Vite)',  level: 80 },
+      { name: 'Flutter',       level: 75 },
+      { name: 'Tailwind CSS',  level: 85 },
+      { name: 'HTML & CSS',    level: 90 },
     ],
   },
   {
-    category: 'Tools & Others',
-    icon: '🛠️',
+    category: 'Databases',
+    icon: '🗄️',
     skills: [
-      { name: 'Git & GitHub', level: 70 },
-      { name: 'Linux / CLI', level: 65 },
-      { name: 'Postman', level: 75 },
+      { name: 'MySQL',        level: 85 },
+      { name: 'PostgreSQL',   level: 75 },
+      { name: 'SQLite',       level: 80 },
+      { name: 'DB Design',    level: 80 },
+    ],
+  },
+  {
+    category: 'Payments & Integrations',
+    icon: '💳',
+    skills: [
+      { name: 'Stripe',       level: 80 },
+      { name: 'PayPal',       level: 75 },
+      { name: 'Webhooks',     level: 75 },
+      { name: 'Git & GitHub', level: 85 },
     ],
   },
 ]
@@ -118,7 +121,7 @@ export default function Skills() {
             What I Work With
           </h2>
           <p className="text-gray-500 font-mono text-sm mt-3">
-            Tools and technologies I use to build things
+            A professional stack built across backend, frontend, mobile, and payments
           </p>
         </div>
 
@@ -131,7 +134,6 @@ export default function Skills() {
               className="border border-gray-800 rounded-lg p-6 bg-gray-900/40 hover:border-cyan-400/20 transition-all duration-300 opacity-0 translate-y-6"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Card Header */}
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-xl">{group.icon}</span>
                 <h3 className="font-mono text-sm font-bold text-white tracking-widest uppercase">
@@ -139,7 +141,6 @@ export default function Skills() {
                 </h3>
               </div>
 
-              {/* Skill Bars */}
               {group.skills.map((skill) => (
                 <SkillBar key={skill.name} name={skill.name} level={skill.level} />
               ))}
@@ -147,10 +148,9 @@ export default function Skills() {
           ))}
         </div>
 
-        {/* Bottom note */}
         <div className="mt-10 text-center">
           <p className="font-mono text-xs text-gray-600 tracking-wide">
-            Skill levels reflect current hands-on experience — always growing.
+            Built across real projects — web, mobile, and production payment systems.
           </p>
         </div>
 

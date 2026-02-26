@@ -24,11 +24,12 @@ export default function Hero() {
         </h1>
 
         <h2 className="font-mono text-xl md:text-2xl text-gray-400 mb-6 tracking-wide">
-          Backend Developer
+          Fullstack & Mobile Developer
         </h2>
 
-        <p className="text-gray-500 text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-mono">
-          I build clean, structured backend systems — APIs, databases, and server logic that powers real applications.
+        <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-mono">
+          I build complete web and mobile applications — Laravel, Django, Rust on the backend,
+          React and Flutter on the frontend, with Stripe and PayPal integrations that work in production.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -1,22 +1,21 @@
 const stats = [
-  { label: 'Year Started', value: '2024' },
-  { label: 'Projects Built', value: '5+' },
-  { label: 'APIs Developed', value: '3+' },
-  { label: 'Commits Made', value: '100+' },
+  { label: 'Year Started',   value: '2024' },
+  { label: 'Projects Built', value: '5+'   },
+  { label: 'APIs Integrated', value: '10+' },
+  { label: 'Commits Made',   value: '100+' },
 ]
 
 const facts = [
-  'I started my backend journey in 2024 with PHP and never looked back.',
-  'I enjoy understanding how systems work under the hood — routing, databases, auth.',
-  'Currently deepening my Laravel knowledge and exploring Node.js.',
-  'I believe clean code and clear API design matter as much as making things work.',
+  'I build complete web and mobile applications — handling everything from database architecture and API design to the final user interface.',
+  'On the backend I work with PHP (Laravel), Python (Django), and Rust — choosing the right tool depending on what the project demands.',
+  'On the frontend I build responsive web apps with React and cross-platform mobile apps with Flutter.',
+  'I integrate real payment systems — Stripe and PayPal — into production applications, handling transactions, webhooks, and edge cases.',
 ]
 
 export default function About() {
   return (
     <section id="about" className="py-28 px-6 bg-gray-950 relative overflow-hidden">
 
-      {/* Subtle background accent */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -30,7 +29,7 @@ export default function About() {
             Who I Am
           </h2>
           <p className="text-gray-500 font-mono text-sm mt-3">
-            A little background on me and what drives me
+            A developer who builds across the full stack — web, mobile, and everything in between
           </p>
         </div>
 
@@ -42,20 +41,22 @@ export default function About() {
             {facts.map((fact, i) => (
               <div key={i} className="flex gap-4 items-start group">
                 <span className="mt-1 w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0 group-hover:scale-150 transition-transform duration-200" />
-                <p className="text-gray-400 font-mono text-sm leading-relaxed">
-                  {fact}
-                </p>
+                <p className="text-gray-400 font-mono text-sm leading-relaxed">{fact}</p>
               </div>
             ))}
 
-            {/* Currently learning */}
+            {/* Stack highlight */}
             <div className="mt-8 p-4 border border-gray-800 rounded bg-gray-900/50">
-              <p className="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-2">
-                Currently Learning
+              <p className="text-xs font-mono text-cyan-400 tracking-widest uppercase mb-3">
+                Core Stack
               </p>
-              <p className="text-gray-400 font-mono text-sm leading-relaxed">
-                Node.js, Express, REST API design, and how to connect frontend and backend into full working systems.
-              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Laravel', 'Django', 'Rust', 'React', 'Flutter', 'MySQL', 'PostgreSQL', 'SQLite', 'Stripe', 'PayPal', 'Tailwind CSS'].map((tech) => (
+                  <span key={tech} className="font-mono text-xs px-2 py-1 rounded bg-gray-800 text-gray-300 border border-gray-700">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -88,10 +89,10 @@ export default function About() {
                 <p className="font-mono text-sm text-gray-300 mt-0.5">Kenya 🇰🇪</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
   )
 }
+
